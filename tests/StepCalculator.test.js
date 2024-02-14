@@ -60,3 +60,16 @@ expect(steps.length).toBe(32);//There were 32 visible in this test data, while o
 
 
 });
+
+const stepCalculator = require('./stepcalculator');
+
+test('Calculates steps correctly', () => {
+    
+    const steps = 32;
+
+    const result = stepCalculator.calculateScore(steps);
+
+    const expectedScore = 100;
+
+    expect(result).toBe(expectedScore);
+});
